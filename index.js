@@ -17,16 +17,8 @@ app.use(bodyParser.json());
 
 // connect to DB
 mongoose.connect(
-    process.env.DB_CONNECTION, { 
-        // user: 'root', //testroot
-        // pass: 123456, //password
-        // dbName: 'test', // 'mydb' which is the default selected DB
-        // autoIndex: 'NODE_ENV' === 'dev',
-        // useNewUrlParser: true,
-        // reconnectTries: Number.MAX_VALUE,
-        // reconnectInterval: 500, // Reconnect every 500ms
-        // poolSize: 10 // Maintain up to 10 socket connections
-     }, () => console.log('Connect to DB')
+    process.env.DB_CONNECTION, { useNewUrlParser: true }, () => 
+    console.log('Connect to DB')
 );
 
 //Import Routers
